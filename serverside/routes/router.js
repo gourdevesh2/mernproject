@@ -185,7 +185,7 @@ router.post('/posts', upload.single('image'), async (req, res) => {
     }
   });
 
-
+// update api 
 
   router.put('/update/:id', upload.single('image'), async (req, res) => {
     const { id } = req.params;
@@ -217,7 +217,7 @@ router.post('/posts', upload.single('image'), async (req, res) => {
       res.status(500).json({ message: 'Failed to update blog post' });
     }
   });
-
+//delete post by Id
   router.delete('/deletePost/:id', async (req, res) => {
     const { id } = req.params;
   
