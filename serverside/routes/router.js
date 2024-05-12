@@ -35,7 +35,6 @@ router.post("/register", async (req, res) => {
     try {
 
         const preuser = await userdb.findOne({ email: email });
-        console.log(preuser)
 
         if (preuser) {
             res.status(422).json({ error: "This Email is Already Exist" })
@@ -51,7 +50,6 @@ router.post("/register", async (req, res) => {
 
             const storeData = await finalUser.save();
 
-            console.log(storeData);
             res.status(201).json({ status: 201, storeData })
         }
 
@@ -68,7 +66,6 @@ router.post("/register", async (req, res) => {
 // user Login
 
 router.post("/login", async (req, res) => {
-    console.log(req.body);
 
     const { email, password } = req.body;
 

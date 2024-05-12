@@ -117,7 +117,7 @@ const UpdatePost = () => {
                 <Button variant="contained" onClick={UpdatePost} color="primary">
                     Publish
                 </Button>
-                <Button variant="contained" onClick={deletePosts} color="primary">
+                <Button variant="contained" onClick={deletePosts} color="primary" style={{marginLeft:'2%'}}>
                     deletePost
                 </Button>
             </StyledFormControl>

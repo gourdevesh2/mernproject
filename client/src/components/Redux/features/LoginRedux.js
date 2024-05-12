@@ -1,6 +1,5 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 import { toast } from 'react-toastify';
-
 // Define the initial state
 const initialState = {
     user: null,
@@ -10,7 +9,6 @@ const initialState = {
 
 // Create an async thunk for user registration
 export const registerUser = createAsyncThunk('auth/registerUser', async ({ fname, email, password, cpassword }) => {
-    alert(fname)
     const response = await fetch("/register", {
         method: "POST",
         headers: {
@@ -30,8 +28,8 @@ export const registerUser = createAsyncThunk('auth/registerUser', async ({ fname
         toast.success("Registration Successfully done 😃!", {
             position: "top-center"
         });
-
-        return data; // Assuming data includes any response information you want to handle
+          
+        return data; 
     } else {
         throw new Error('Failed to register user');
     }

@@ -21,7 +21,6 @@ const Register = () => {
 
 
     const setVal = (e) => {
-        // console.log(e.target.value);
         const { name, value } = e.target;
 
         setInpval(() => {
@@ -90,7 +89,7 @@ const Register = () => {
         // Dispatch registerUser action
         try {
           await dispatch(registerUser({ fname, email, password, cpassword }));
-         
+           
           setInpval({
             fname: '',
             email: '',
